@@ -179,8 +179,8 @@ Exercise 5: Register these two news organizations as listeners to the
 newswire event.
 ......................................................................*)
 
-WEvent.add_listener newswire fakeNewsNetwork ;;
-WEvent.add_listener newswire buzzFake ;;
+let a = WEvent.add_listener newswire fakeNewsNetwork ;;
+let b = WEvent.add_listener newswire buzzFake ;;
 
 (* Here are some headlines to play with. *)
 
@@ -209,8 +209,8 @@ the publications don't publish right away. *)
 Exercise 7: Remove the newswire listeners that were previously registered.
 ......................................................................*)
 
-WEvent.remove_listener newswire 0 ;;
-WEvent.remove_listener newswire 1 ;;
+WEvent.remove_listener newswire a ;;
+WEvent.remove_listener newswire b ;;
 
 (*......................................................................
 Exercise 8: Create a new event called publish to signal that all
